@@ -1,0 +1,23 @@
+{
+  "stubbed": false,
+  "package": {
+    "repo": "overstory-cli",
+    "npmName": "@os-eco/overstory-cli",
+    "version": "0.9.1"
+  },
+  "binary": {
+    "name": "overstory",
+    "upstreamName": "overstory",
+    "entrypoint": "src/index.ts",
+    "aliases": []
+  },
+  "dist": {
+    "url": "https://registry.npmjs.org/@os-eco/overstory-cli/-/overstory-cli-0.9.1.tgz",
+    "hash": "sha512-fK+syM699Gomik1OXOL0bJ1B6PF7aMbMIX3tkp9iPsvrADB6FXucAoZIPn/UwG9Po+oGBCXoNUAKSSAfrOrFcw=="
+  },
+  "meta": {
+    "description": "Multi-agent orchestration for AI coding agents — spawn workers in git worktrees via tmux, coordinate through SQLite mail, merge with tiered conflict resolution. Pluggable runtime adapters for Claude Code, Pi, and more.",
+    "homepage": "https://github.com/jayminwest/overstory",
+    "licenseSpdx": "MIT"
+  }
+}
