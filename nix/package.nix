@@ -171,6 +171,12 @@ EOF
       substituteInPlace "$nodePtyUnix" --replace-fail "$oldUnixResize" "$newUnixResize"
     fi
   '';
+  overstoryPatch = lib.optionalString (manifest.package.repo == "overstory-cli") ''
+    overstoryNodeModules="$out/share/${manifest.package.repo}/node_modules"
+    find "$overstoryNodeModules" \
+      \( -path '*src/runtimes/pi-guards.ts' -o -path '*src/runtimes/pi-guards.test.ts' \) \
+      -delete
+  '';
   basePackage = bun2nix.writeBunApplication {
   pname = manifest.package.repo;
   version = manifest.package.version;
@@ -186,6 +192,7 @@ EOF
   };
   postInstall = ''
     ${geminiPatch}
+    ${overstoryPatch}
   '';
   meta = with lib; {
     description = manifest.meta.description;
