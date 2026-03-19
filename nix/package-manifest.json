@@ -9,7 +9,9 @@
     "name": "overstory",
     "upstreamName": "overstory",
     "entrypoint": "src/index.ts",
-    "aliases": []
+    "aliases": [
+      "ov"
+    ]
   },
   "dist": {
     "url": "https://registry.npmjs.org/@os-eco/overstory-cli/-/overstory-cli-0.9.1.tgz",
