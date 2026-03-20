@@ -282,6 +282,9 @@ EOF
         --replace-fail 'import { openSessionStore } from "../sessions/compat.ts";' \
                          'import { openSessionStore } from "../sessions/compat.ts";
 import { buildProjectTmuxCliArgs } from "../worktree/tmux.ts";' \
+        --replace-fail '	const overstoryDir = join(root, ".overstory");' \
+                         '	const projectRoot = root;
+	const overstoryDir = join(root, ".overstory");' \
         --replace-fail '	const root = config.project.root;' \
                          '	const projectRoot = config.project.root;
 	const root = projectRoot;' \
