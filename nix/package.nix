@@ -282,6 +282,9 @@ EOF
         --replace-fail 'import { openSessionStore } from "../sessions/compat.ts";' \
                          'import { openSessionStore } from "../sessions/compat.ts";
 import { buildProjectTmuxCliArgs } from "../worktree/tmux.ts";' \
+        --replace-fail '	const root = config.project.root;' \
+                         '	const projectRoot = config.project.root;
+	const root = projectRoot;' \
         --replace-fail 'async function captureTmux(sessionName: string, lines: number): Promise<string | null> {' \
                          'async function captureTmux(sessionName: string, lines: number, projectRoot: string): Promise<string | null> {' \
         --replace-fail '		const proc = Bun.spawn(["tmux", "capture-pane", "-t", sessionName, "-p", "-S", `-''${lines}`], {' \
