@@ -29,4 +29,4 @@ Nix packaging for `@os-eco/overstory-cli` using Bun and `bun2nix`.
 - The default `out` output installs the longform binary name `overstory`.
 - The shortform name `ov` is available as a separate Nix output, not in the default `out` output.
 - The packaged output removes the bundled Pi guard extension files and the `pi.ts` integration that writes them.
-- Pi guard handling is intended to live in `RogerNavelsaker/os-eco-pi-extension`, not in this package.
+- Pi guard handling is intended to live in `RogerNavelsaker/pi-os-eco`, not in this package.
