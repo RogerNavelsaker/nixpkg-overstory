@@ -1,4 +1,4 @@
-# overstory-cli
+# nixpkg-overstory
 
 Nix packaging for `@os-eco/overstory-cli` using Bun and `bun2nix`.
 
